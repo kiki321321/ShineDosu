@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.kiki.kyoto-converter</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/bin/env</string>
+      <string>node</string>
+      <string>/Users/kiki/Desktop/shineDOSU/server.js</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/kiki/Desktop/shineDOSU</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>OPENAI_API_KEY</key>
+      <string>YOUR_API_KEY_HERE</string>
+      <key>PORT</key>
+      <string>3000</string>
+    </dict>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/kiki/Desktop/shineDOSU/logs/server.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/kiki/Desktop/shineDOSU/logs/server.err.log</string>
+  </dict>
+</plist>

@@ -60,13 +60,6 @@ document.querySelector("#clearBtn").addEventListener("click", () => {
   setStatus("クリアしました");
 });
 
-document.querySelector("#swapBtn").addEventListener("click", () => {
-  const tmp = inputEl.value;
-  inputEl.value = outputEl.value;
-  outputEl.value = tmp;
-  setStatus("入れ替えました");
-});
-
 document.querySelector("#copyBtn").addEventListener("click", async () => {
   if (!outputEl.value) return;
   try {
@@ -77,4 +70,34 @@ document.querySelector("#copyBtn").addEventListener("click", async () => {
     document.execCommand("copy");
     setStatus("コピーしました");
   }
+});
+
+document.querySelector("#shareBtn").addEventListener("click", async () => {
+  if (!outputEl.value) return;
+  if (!navigator.share) {
+    setStatus("このブラウザはシェアに対応していません。");
+    return;
+  }
+  try {
+    await navigator.share({ text: outputEl.value });
+    setStatus("シェアしました");
+  } catch {
+    setStatus("シェアをキャンセルしました");
+  }
+});
+
+document.querySelector("#xBtn").addEventListener("click", () => {
+  if (!outputEl.value) return;
+  const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+    outputEl.value
+  )}`;
+  window.open(url, "_blank", "noopener");
+});
+
+document.querySelector("#lineBtn").addEventListener("click", () => {
+  if (!outputEl.value) return;
+  const url = `https://social-plugins.line.me/lineit/share?text=${encodeURIComponent(
+    outputEl.value
+  )}`;
+  window.open(url, "_blank", "noopener");
 });
