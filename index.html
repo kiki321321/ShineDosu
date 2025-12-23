@@ -11,14 +11,8 @@
       <div class="wrap">
         <header>
           <h1>京ことば 変換所</h1>
-          <p class="lead">話し言葉を入力すると、GPTが京都弁に変換します。</p>
+          <p class="lead">話し言葉を入力すると、京都弁に変換されるどす。</p>
         </header>
-
-        <section class="panel settings">
-          <div class="tag">使い方</div>
-          <p class="note">ローカルでAPIサーバーを起動してから使ってください。</p>
-          <code class="cmd">OPENAI_API_KEY=*** node server.js</code>
-        </section>
 
         <div class="grid">
           <section class="panel">
@@ -27,7 +21,6 @@
             <div class="actions">
               <button id="convertBtn">変換する</button>
               <button class="secondary" id="clearBtn">消去</button>
-              <button class="secondary" id="swapBtn">入れ替え</button>
             </div>
           </section>
 
@@ -36,6 +29,9 @@
             <textarea id="outputText" readonly placeholder="ここに変換結果が表示されます"></textarea>
             <div class="actions">
               <button class="secondary" id="copyBtn">コピー</button>
+              <button class="secondary" id="shareBtn">シェア</button>
+              <button class="secondary" id="xBtn">Xに送信</button>
+              <button class="secondary" id="lineBtn">LINEに送信</button>
             </div>
             <div class="note" id="statusText">準備完了</div>
           </section>
