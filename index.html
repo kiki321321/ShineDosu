@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>京ことば 変換所</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="kyoto-app">
+      <div class="wrap">
+        <header>
+          <h1>京ことば 変換所</h1>
+          <p class="lead">話し言葉を入力すると、GPTが京都弁に変換します。</p>
+        </header>
+
+        <section class="panel settings">
+          <div class="tag">使い方</div>
+          <p class="note">ローカルでAPIサーバーを起動してから使ってください。</p>
+          <code class="cmd">OPENAI_API_KEY=*** node server.js</code>
+        </section>
+
+        <div class="grid">
+          <section class="panel">
+            <div class="tag">入力</div>
+            <textarea id="inputText" placeholder="例: 今日は何してるの？一緒に行こう。"></textarea>
+            <div class="actions">
+              <button id="convertBtn">変換する</button>
+              <button class="secondary" id="clearBtn">消去</button>
+              <button class="secondary" id="swapBtn">入れ替え</button>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="tag">京都弁</div>
+            <textarea id="outputText" readonly placeholder="ここに変換結果が表示されます"></textarea>
+            <div class="actions">
+              <button class="secondary" id="copyBtn">コピー</button>
+            </div>
+            <div class="note" id="statusText">準備完了</div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
