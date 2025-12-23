@@ -1,9 +1,9 @@
 :root {
-  --bg: #f7f2ea;
-  --ink: #2b2620;
-  --accent: #c65a2e;
-  --card: #fff8ee;
-  --muted: #6a5f55;
+  --bg: #f3f6e7;
+  --ink: #3a2a1d;
+  --accent: #6b7a2a;
+  --card: #faf7ee;
+  --muted: #6d5a4a;
 }
 
 * {
@@ -14,8 +14,8 @@ body {
   margin: 0;
   font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
   color: var(--ink);
-  background: radial-gradient(circle at 20% 20%, #fff4df, transparent 60%),
-    radial-gradient(circle at 80% 0%, #ffe8d1, transparent 55%), var(--bg);
+  background: radial-gradient(circle at 20% 20%, #e6f0b8, transparent 60%),
+    radial-gradient(circle at 80% 0%, #d7c5ab, transparent 55%), var(--bg);
   min-height: 100vh;
 }
 
@@ -56,7 +56,7 @@ textarea {
   min-height: 200px;
   padding: 14px;
   border-radius: 14px;
-  border: 1px solid #e8dac9;
+  border: 1px solid #d9cdbd;
   background: var(--card);
   color: var(--ink);
   font-size: 16px;
@@ -66,7 +66,7 @@ textarea {
 
 .panel {
   background: var(--card);
-  border: 1px solid #f0e1d0;
+  border: 1px solid #e3d7c9;
   border-radius: 16px;
   padding: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
@@ -92,7 +92,7 @@ input {
   width: 100%;
   padding: 10px 12px;
   border-radius: 10px;
-  border: 1px solid #e8dac9;
+  border: 1px solid #d9cdbd;
   background: #fffdf9;
   font-size: 14px;
 }
@@ -101,7 +101,8 @@ input {
   margin-top: 12px;
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 button {
@@ -115,8 +116,24 @@ button {
 }
 
 button.secondary {
-  background: #efe2d2;
+  background: #ded6c6;
   color: #3a2c22;
+}
+
+.x-btn {
+  background: #1a1a1a;
+  color: #f3efe7;
+}
+
+.line-btn {
+  background: #06c755;
+  color: #ffffff;
+}
+
+.icon {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 6px;
 }
 
 .note {
@@ -129,8 +146,8 @@ button.secondary {
   display: inline-block;
   padding: 2px 8px;
   border-radius: 999px;
-  background: #f1d6bf;
-  color: #6a3a1d;
+  background: #d6dda6;
+  color: #4a4f1f;
   font-size: 12px;
   margin-right: 6px;
 }
@@ -140,7 +157,7 @@ button.secondary {
   margin-top: 10px;
   padding: 6px 10px;
   border-radius: 8px;
-  background: #f0e1d0;
+  background: #e2dcc8;
   font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   font-size: 12px;
